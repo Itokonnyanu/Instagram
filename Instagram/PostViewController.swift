@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import FirebaseDatabase
 import SVProgressHUD
-
+// 投稿時の処理
 class PostViewController: UIViewController {
 
     var image: UIImage!
@@ -29,7 +29,7 @@ class PostViewController: UIViewController {
         let postRef = Database.database().reference().child(Const.PostPath)
         // 辞書を作成  [パス名:データ]の辞書
         let postDic = ["caption": textField.text!, "image": imageString, "time": String(time), "name": name!]
-        // postRefのフォルダに新たにフォルダを追加してデータを保存
+        // postsフォルダに新たにユニークなフォルダを追加してデータを保存
         postRef.childByAutoId().setValue(postDic)
         
         // HUDで投稿完了を表示する

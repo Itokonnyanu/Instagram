@@ -13,6 +13,7 @@
 		77703CAB21CCAD1000BB1271 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77703CAA21CCAD1000BB1271 /* PostData.swift */; };
 		77703CAE21CCADA000BB1271 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77703CAC21CCADA000BB1271 /* PostTableViewCell.swift */; };
 		77703CAF21CCADA000BB1271 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77703CAD21CCADA000BB1271 /* PostTableViewCell.xib */; };
+		77703CB121CD1F8600BB1271 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77703CB021CD1F8600BB1271 /* CommentViewController.swift */; };
 		77FEF0CF21CC874100C7A197 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FEF0CE21CC874100C7A197 /* AppDelegate.swift */; };
 		77FEF0D121CC874100C7A197 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FEF0D021CC874100C7A197 /* ViewController.swift */; };
 		77FEF0D421CC874100C7A197 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77FEF0D221CC874100C7A197 /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 		77703CAA21CCAD1000BB1271 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
 		77703CAC21CCADA000BB1271 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		77703CAD21CCADA000BB1271 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
+		77703CB021CD1F8600BB1271 /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		77FEF0CB21CC874100C7A197 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77FEF0CE21CC874100C7A197 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77FEF0D021CC874100C7A197 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,12 +103,13 @@
 				77FEF0CE21CC874100C7A197 /* AppDelegate.swift */,
 				77FEF0D021CC874100C7A197 /* ViewController.swift */,
 				77FEF0E021CC87F200C7A197 /* LoginViewController.swift */,
-				77FEF0E221CC880000C7A197 /* HomeViewController.swift */,
-				77FEF0E421CC881C00C7A197 /* ImageSelectViewController.swift */,
 				77FEF0E821CC883700C7A197 /* SettingViewController.swift */,
+				77FEF0E421CC881C00C7A197 /* ImageSelectViewController.swift */,
 				77FEF0E621CC882800C7A197 /* PostViewController.swift */,
-				77FEF0D221CC874100C7A197 /* Main.storyboard */,
 				77703CAA21CCAD1000BB1271 /* PostData.swift */,
+				77FEF0D221CC874100C7A197 /* Main.storyboard */,
+				77703CB021CD1F8600BB1271 /* CommentViewController.swift */,
+				77FEF0E221CC880000C7A197 /* HomeViewController.swift */,
 				77703CAC21CCADA000BB1271 /* PostTableViewCell.swift */,
 				77703CAD21CCADA000BB1271 /* PostTableViewCell.xib */,
 				77703CA821CCA83900BB1271 /* Const.swift */,
@@ -254,6 +257,7 @@
 				77703CAE21CCADA000BB1271 /* PostTableViewCell.swift in Sources */,
 				77FEF0E921CC883700C7A197 /* SettingViewController.swift in Sources */,
 				77FEF0E321CC880000C7A197 /* HomeViewController.swift in Sources */,
+				77703CB121CD1F8600BB1271 /* CommentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

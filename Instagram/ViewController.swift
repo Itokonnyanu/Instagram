@@ -43,14 +43,19 @@ class ViewController: UIViewController {
         // 背景色、選択時の色を設定する
         tabBarController.selectedColor = UIColor(red: 1.0, green: 0.44, blue: 0.11, alpha: 1)
         tabBarController.buttonsBackgroundColor = UIColor(red: 0.96, green: 0.91, blue: 0.87, alpha: 1)
+        //多分タブの高さ
         tabBarController.selectionIndicatorHeight = 3
         
         // 作成したESTabBarControllerを親のViewController（＝self）に追加する
+        //上のはViewControllerの中で定義しただけ
         addChildViewController(tabBarController)
         let tabBarView = tabBarController.view!
+        //autoresizingをoff
         tabBarView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(tabBarView)
+        //safeAreaをゲット
         let safeArea = view.safeAreaLayoutGuide
+        //autolayout込み込みの配置
         NSLayoutConstraint.activate([
             tabBarView.topAnchor.constraint(equalTo: safeArea.topAnchor),
             tabBarView.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor),
@@ -60,6 +65,7 @@ class ViewController: UIViewController {
         tabBarController.didMove(toParentViewController: self)
         
         // タブをタップした時に表示するViewControllerを設定する
+        //このインスタンスの仕方でstoryboardと関連したインスタンスができる
         let homeViewController = storyboard?.instantiateViewController(withIdentifier: "Home")
         let settingViewController = storyboard?.instantiateViewController(withIdentifier: "Setting")
         
@@ -70,8 +76,8 @@ class ViewController: UIViewController {
         tabBarController.highlightButton(at: 1)
         tabBarController.setAction({
             // ボタンが押されたらImageViewControllerをモーダルで表示する
-            let imageViewController = self.storyboard?.instantiateViewController(withIdentifier: "ImageSelect")
-            self.present(imageViewController!, animated: true, completion: nil)
+            let imageSelectViewController = self.storyboard?.instantiateViewController(withIdentifier: "ImageSelect")
+            self.present(imageSelectViewController!, animated: true, completion: nil)
         }, at: 1)
     }
 }

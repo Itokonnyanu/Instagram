@@ -9,8 +9,8 @@
 import UIKit
 import Firebase
 import FirebaseDatabase
-
-//データの置き換えしてる
+// 投稿後のデータ
+// データの置き換えしてる
 class PostData: NSObject {
     var id: String?
     var image: UIImage?
@@ -20,10 +20,12 @@ class PostData: NSObject {
     var date: Date?
     var likes: [String] = []
     var isLiked: Bool = false
-    
+    var comments: [String] = []
+    var sentence: String?
     init(snapshot: DataSnapshot, myId: String) {
+        // データのidを取得
         self.id = snapshot.key
-        
+        // データを辞書として取得
         let valueDictionary = snapshot.value as! [String: Any]
         
         imageString = valueDictionary["image"] as? String
@@ -35,6 +37,20 @@ class PostData: NSObject {
         
         let time = valueDictionary["time"] as? String
         self.date = Date(timeIntervalSinceReferenceDate: TimeInterval(time!)!)
+        // (表示名:キャプション)の文字列作成
+        let postCaption: String! = "\(self.name!):\(self.caption!)"
+        
+        if let comments = valueDictionary["comments"] as? [String] {
+            self.comments = comments
+        }
+        // キャプションとコメントを合体させてsentenceデータを作成
+        // commentsの全要素を出す。→\nを挟みながら合体
+        var preSentence = ""
+        for item in comments{
+            preSentence += item + "\n"
+        }
+
+        self.sentence = postCaption + "\n" + preSentence
         
         if let likes = valueDictionary["likes"] as? [String] {
             self.likes = likes
