@@ -99,6 +99,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="commentButton" destination="KZ7-rI-CBC" id="fqE-r9-jGk"/>
+                <outlet property="commentLabel" destination="1D1-ra-OqQ" id="cd9-yz-h7V"/>
                 <outlet property="dateLabel" destination="r4A-xG-Ffq" id="adq-eH-zv7"/>
                 <outlet property="likeButton" destination="2Yk-HQ-MmF" id="5hh-UO-U6K"/>
                 <outlet property="likeLabel" destination="gNw-Ka-Vqa" id="b64-H4-Dlh"/>

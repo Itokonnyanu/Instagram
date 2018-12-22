@@ -16,6 +16,7 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var sentenceLabel: UILabel!
     @IBOutlet weak var commentButton: UIButton!
+    @IBOutlet weak var commentLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -34,7 +35,8 @@ class PostTableViewCell: UITableViewCell {
         self.sentenceLabel.text = postData.sentence
         let likeNumber = postData.likes.count
         likeLabel.text = "\(likeNumber)"
-        
+        let commentNumber = postData.comments.count
+        commentLabel.text = "\(commentNumber)"
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd HH:mm"
         let dateString = formatter.string(from: postData.date!)
